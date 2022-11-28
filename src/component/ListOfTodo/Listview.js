@@ -1,16 +1,15 @@
-import ListTable from './ListStyled';
-import { Button } from '@chemcycled/components';
+import { ListTable, StyleButton } from './ListStyled';
 const ListView = ({ columns, dataSource, navigate }) => {
   const actionButton = {
     icon: 'add',
     text: 'Add Products',
-    onClick: () => navigate('/'),
+    onClick: () => navigate('/add'),
     fillColor: 'black',
     strokeColor: 'black',
   };
   return (
     <>
-      <Button {...actionButton} />
+      <StyleButton {...actionButton} />
 
       <ListTable columns={columns} dataSource={dataSource} />
     </>

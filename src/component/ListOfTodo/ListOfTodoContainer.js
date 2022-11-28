@@ -25,7 +25,7 @@ const ListOfTodo = () => {
     );
   };
   const EditProd = (id) => {
-    navigate(`/list/edit/${id}`);
+    navigate(`edit/${id}`);
   };
 
   return (

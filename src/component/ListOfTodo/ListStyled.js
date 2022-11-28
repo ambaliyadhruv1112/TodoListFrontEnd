@@ -1,9 +1,9 @@
-import { Table } from '@chemcycled/components';
+import { Table, Button } from '@chemcycled/components';
 import styled from 'styled-components';
 
-const ListTable = styled(Table)`
+export const ListTable = styled(Table)`
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 10px;
 
   .ant-table-thead > tr > th {
     font-weight: 700;
@@ -11,4 +11,6 @@ const ListTable = styled(Table)`
   }
 `;
 
-export default ListTable;
+export const StyleButton = styled(Button)`
+  margin: 20px;
+`;

@@ -16,7 +16,7 @@ const TodoInputContainer = () => {
       },
       {
         onSuccess: () => {
-          navigate('/list');
+          navigate('/');
         },
       }
     );

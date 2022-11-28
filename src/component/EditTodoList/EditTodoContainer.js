@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import ListView from './ListView';
+import EditView from './EditView';
 import useEditTodo from '../../services/Todo/useEditTodo';
 import useEdit from '../../services/Todo/useEdit';
-const ListEditContainer = () => {
+const EditTodoContainer = () => {
   const { id } = useParams();
   const useMutation = useEditTodo(id);
   const { data, status } = useEdit(id);
@@ -15,7 +15,7 @@ const ListEditContainer = () => {
       { itemName, description },
       {
         onSuccess: () => {
-          navigate('/list');
+          navigate('/');
         },
       }
     );
@@ -25,7 +25,7 @@ const ListEditContainer = () => {
       {status === 'error' && <p>Error fetching data</p>}
       {status === 'loading' && <p>Fetching data...</p>}
       {status === 'success' && (
-        <ListView
+        <EditView
           handleSubmit={handleSubmit(editSubmit)}
           data={data?.data}
           register={register}
@@ -35,13 +35,4 @@ const ListEditContainer = () => {
   );
 };
 
-export default ListEditContainer;
-
-/* <form onSubmit={handleSubmit(editSubmit)}>
-          <input placeholder={data?.data?.itemName} {...register('itemName')} />
-          <input
-            placeholder={data?.data?.description}
-            {...register('description')}
-          />
-          <button>Add</button>
-        </form> */
+export default EditTodoContainer;
