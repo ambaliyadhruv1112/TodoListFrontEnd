@@ -1,17 +1,18 @@
 import { useQueryClient } from 'react-query';
 import { useTheme } from '@chemcycled/components';
-import useTodos from '../../services/Todo/useTodo';
+import useProductsList from '../../services/product/useProductsList';
 import { useNavigate } from 'react-router-dom';
-import useDeleteTodo from '../../services/Todo/useDeleteTodo';
+import useDeleteProduct from '../../services/product/useDeleteProduct';
 import ColumnsData from './ListOfColumns';
 import ListView from './Listview';
 
-const ListOfTodo = () => {
+const ListOfProduct = () => {
   const theme = useTheme();
-  const { data, status } = useTodos();
+  const { data, status } = useProductsList();
+  console.log(data);
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const deleteTodo = useDeleteTodo();
+  const deleteTodo = useDeleteProduct();
   const DeleteProd = (id) => {
     deleteTodo.mutate(
       {
@@ -25,7 +26,7 @@ const ListOfTodo = () => {
     );
   };
   const EditProd = (id) => {
-    navigate(`edit/${id}`);
+    // navigate(`edit/${id}`);
   };
 
   return (
@@ -43,4 +44,4 @@ const ListOfTodo = () => {
   );
 };
 
-export default ListOfTodo;
+export default ListOfProduct;

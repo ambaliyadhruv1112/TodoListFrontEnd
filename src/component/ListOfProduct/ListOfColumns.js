@@ -3,13 +3,13 @@ import { Button } from '@chemcycled/components';
 const ColumnsData = (theme, EditProd, DeleteProd) => [
   {
     key: '1',
-    title: 'Item Name',
-    dataIndex: 'itemName',
+    title: 'Chemical Name',
+    dataIndex: 'chemicalName',
   },
   {
     key: 2,
-    title: 'Item Description',
-    dataIndex: 'description',
+    title: 'Seller Name',
+    dataIndex: 'sellerName',
   },
   {
     key: 3,

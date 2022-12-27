@@ -1,16 +1,14 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import EditTodoContainer from './component/EditTodoList';
-import TodoInputContainer from './component/InputTodo.js';
-import ListOfTodo from './component/ListOfTodo';
+import AddProduct from './component/Product/AddProduct.js';
+import ListOfProduct from './component/ListOfProduct';
 
 function App() {
   return (
     <div className='App'>
       <Routes>
-        <Route path='' element={<ListOfTodo />} />
-        <Route path='/add' element={<TodoInputContainer />} />
-        <Route path='/edit/:id' element={<EditTodoContainer />} />
+        <Route path='' element={<ListOfProduct />} />
+        <Route path='/addProduct' element={<AddProduct />} />
       </Routes>
     </div>
   );

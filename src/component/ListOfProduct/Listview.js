@@ -2,8 +2,8 @@ import { ListTable, StyleButton } from './ListStyled';
 const ListView = ({ columns, dataSource, navigate }) => {
   const actionButton = {
     icon: 'add',
-    text: 'Add Products',
-    onClick: () => navigate('/add'),
+    text: 'Add Product',
+    onClick: () => navigate('/addProduct'),
     fillColor: 'black',
     strokeColor: 'black',
   };

@@ -2,13 +2,13 @@ import axios from 'axios';
 import { useQuery } from 'react-query';
 
 const getEditList = (id) => {
-  return axios.get(`http://localhost:3050/todos/${id}`);
+  return axios.get(`http://localhost:3300/product/${id}`);
 };
 
-const useEdit = (id) => {
+const useGetProduct = (id) => {
   return useQuery(['todosEdit'], () => getEditList(id), {
     useErrorBoundary: true,
   });
 };
 
-export default useEdit;
+export default useGetProduct;
