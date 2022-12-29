@@ -14,7 +14,6 @@ const FormInput = ({
   ...rest
 }) => {
   const { error, color } = getFieldError({ name, ...rest });
-
   return (
     <Box>
       <Controller

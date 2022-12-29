@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
-const getTodo = () => {
+const getProduct = () => {
   return axios.get('http://localhost:3300/product');
 };
 
 const useProductsList = () => {
-  return useQuery(['todos'], () => getTodo(), {
+  return useQuery(['Products'], () => getProduct(), {
     useErrorBoundary: true,
   });
 };

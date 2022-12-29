@@ -6,7 +6,7 @@ const getEditList = (id) => {
 };
 
 const useGetProduct = (id) => {
-  return useQuery(['todosEdit'], () => getEditList(id), {
+  return useQuery(['ProductsEdit'], () => getEditList(id), {
     useErrorBoundary: true,
   });
 };

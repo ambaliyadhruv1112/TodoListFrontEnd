@@ -9,24 +9,23 @@ import ListView from './Listview';
 const ListOfProduct = () => {
   const theme = useTheme();
   const { data, status } = useProductsList();
-  console.log(data);
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-  const deleteTodo = useDeleteProduct();
+  const deleteProduct = useDeleteProduct();
   const DeleteProd = (id) => {
-    deleteTodo.mutate(
+    deleteProduct.mutate(
       {
         id,
       },
       {
         onSuccess: () => {
-          queryClient.invalidateQueries({ queryKey: ['todos'] });
+          queryClient.invalidateQueries({ queryKey: ['Products'] });
         },
       }
     );
   };
   const EditProd = (id) => {
-    // navigate(`edit/${id}`);
+    navigate(`edit/${id}`);
   };
 
   return (

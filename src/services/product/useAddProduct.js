@@ -2,12 +2,12 @@ import axios from 'axios';
 
 import { useMutation } from 'react-query';
 
-const addTodo = (data) => {
+const addProduct = (data) => {
   return axios.post('http://localhost:3300/product', data);
 };
 
 const useAddProduct = () => {
-  return useMutation((data) => addTodo(data), {
+  return useMutation((data) => addProduct(data), {
     useErrorBoundary: true,
   });
 };

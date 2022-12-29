@@ -2,12 +2,12 @@ import axios from 'axios';
 
 import { useMutation } from 'react-query';
 
-const deleteTodo = (id) => {
+const deleteProduct = (id) => {
   return axios.delete(`http://localhost:3300/product/${id}`);
 };
 
 const useDeleteProduct = () => {
-  return useMutation(({ id }) => deleteTodo(id), {
+  return useMutation(({ id }) => deleteProduct(id), {
     useErrorBoundary: true,
   });
 };

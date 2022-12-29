@@ -2,12 +2,12 @@ import axios from 'axios';
 
 import { useMutation } from 'react-query';
 
-const editTodo = (id, data) => {
-  return axios.patch(`http://localhost:3050/todos/${id}`, data);
+const editProduct = (id, data) => {
+  return axios.patch(`http://localhost:3050/Products/${id}`, data);
 };
 
 const useEditProduct = (id) => {
-  return useMutation((data) => editTodo(id, data), {
+  return useMutation((data) => editProduct(id, data), {
     useErrorBoundary: true,
   });
 };
